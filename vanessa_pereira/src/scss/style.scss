@@ -1,0 +1,472 @@
+/*---Variables---*/
+
+/*Font Weigh*/
+$fw-400: 400;
+$fw-600: 600;
+$fw-700: 700;
+
+/*Font Size*/
+$fs-11: 11px;
+$fs-12: 12px;
+$fs-14: 14px;
+$fs-16: 16px;
+$fs-19: 19px;
+$fs-24: 24px;
+$fs-40: 40px;
+
+/*Colours*/
+$clr-252: #252733;
+$clr-363: #363740;
+$clr-9fa: #9fa2b4;
+$clr-a4a: #A4A6B3;
+$clr-c5c: #C5C7CD;
+$clr-dde: #DDE2FF;
+$clr-f7f: #F7F8FC;
+$white: #ffffff;
+$clr-375:#3751FF;
+
+/*Margins*/
+$m-36: 36px;
+
+/*Paddings*/
+$p-12: 12px;
+$p-18: 18px;
+$p-24: 24px;
+$p-30: 30px;
+$p-32: 32px;
+$p-34: 34px;
+
+/*Font Mixins*/
+@mixin font_11 {
+    font-family: 'Mulish';
+    font-weight: $fw-700;
+    font-size: $fs-11;
+    line-height: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+@mixin font_12 ($color) {
+    font-family: 'Mulish';
+    font-weight: $fw-400;
+    font-size: $fs-12;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+}
+
+@mixin font_14 ($color) {
+    font-family: 'Mulish';
+    font-weight: $fw-600;
+    font-size: $fs-14;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: $color;
+}
+
+@mixin font_16 ($color) {
+    font-family: 'Mulish';
+    font-weight: $fw-400;
+    font-size: $fs-16;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: $color;
+}
+
+@mixin font_19 ($color) {
+    font-family: 'Mulish';
+    font-weight: $fw-700;
+    font-size: $fs-19;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: $color;
+}
+
+@mixin font_24 ($color) {
+    font-family: 'Mulish';
+    font-weight: $fw-700;
+    font-size: $fs-24;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    color: $color;
+}
+
+@mixin font_40 ($color) {
+    font-family: 'Mulish';
+    font-weight: $fw-700;
+    font-size: $fs-40;
+    line-height: 50px;
+    letter-spacing: 1px;
+    color: $color;
+}
+
+
+
+
+
+/*---Code---*/
+
+h1 {
+    @include font_19($clr-a4a);
+    opacity: 0.7;
+    padding-top: 4px;
+}
+
+h2 {
+    @include font_24 ($clr-252)
+}
+
+h3,
+h5,
+h6 {
+    @include font_19($clr-252)
+}
+
+body {
+    background-color: $clr-363;
+
+    #dashboard {
+
+        #logo {
+            display: flex;
+            justify-content: center;
+            margin-top: $m-36;
+
+            i {
+                font-size: 32px;
+                padding-right: $p-12;
+                color: $clr-375;
+            }
+        }
+        
+        .nav {
+            padding-top: 55px;
+
+            .nav-item {
+                @include font_16($clr-a4a);
+
+                .nav-link {
+                    padding: $p-18 $p-32;
+                    @include font_16($clr-a4a);
+                    
+                    &:hover {
+                        background: rgb(159,162,180,.08);
+                    }
+
+                    i {
+                        font-size: $fs-16;
+                        width: 16px;
+                        padding-right: $p-24;
+                    }
+                }
+
+                .active {
+                    border-left: 3px solid $clr-dde;
+                    background: rgb(159,162,180,.08);
+                    color: $clr-dde;
+                }
+            }
+        }
+    }
+
+    main {
+        background-color: $clr-f7f;
+        padding: $p-30;
+        
+        header {
+            padding: 0 $p-30;
+
+            .profile {
+                display: flex;
+                @include font_14($clr-252);
+
+                i{
+                   padding: 0 $p-12;
+                   color: $clr-c5c;
+
+                   &:hover{
+                    cursor: pointer;
+                   }
+                }
+
+                p {
+                    padding: 8px 14px 0 $p-24;
+                }
+
+                #ellipse {
+                    display: flex;
+                    justify-content: center;
+                    height: 44px;
+                    width: 44px;
+                    border: 1.5px solid #DFE0EB;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    
+                    #profilePic {
+                        display: flex;
+                        justify-content: center;
+                        height: 100%;
+                        width: auto;
+                        overflow: hidden;
+                        border: 1.5px solid $white;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .vr {
+                margin-left: $p-18;
+            }
+        }
+
+        .data {
+            text-align: center;
+            padding: $p-30 $p-30 0 $p-30;
+
+            .col {
+                @include font_19($clr-9fa);
+
+                &:hover {
+                    color: $clr-375;
+                }
+
+                .card {
+                    padding: $p-24 0;
+
+                    &:hover {
+                        border: 1px solid $clr-375;
+                        cursor: pointer;
+                    }
+                    
+                    .card-body {
+
+                        .number {
+                            @include font_40($clr-252);
+
+                            &:hover {
+                                color: $clr-375;
+                            }
+                        }
+                    }
+                }
+                
+                .selected {
+                    border: 1px solid #3751FF;
+
+                    .active {
+                        @include font_19($clr-375);
+
+                        .number {
+                                color: $clr-375;
+                        }
+                    }
+                }
+            }
+        }
+
+        .trends {
+            padding: $p-30 $p-30 0 $p-30;
+
+            .container {
+                display: flex;
+                background-color: $white;
+                border: 1px solid #DFE0EB;
+                border-radius: 8px;
+
+                figure {
+                    padding: $p-32 $p-30 0;
+
+                    .row {
+                        padding: 0 $p-12;
+
+                        #updateTime {
+                            display: inline-flex;
+                            @include font_12($clr-9fa);
+                            color: #9fa2b4;
+                        }
+
+                        #legend {
+                            display: inline-flex;
+                            justify-content: end;
+                            @include font_12($clr-9fa);
+                            color: #9fa2b4;
+
+                            #today {
+                                background-color: $clr-375;
+                                margin-right: 8px; 
+                            }
+
+                            #yesterday {
+                                background-color: #DFE0EB;
+                                margin-right: 8px;
+                                margin-left: $p-32;
+                            }
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        padding-right: $p-30;
+                    }
+                }
+
+                .stats {
+                    display: flex;
+                    text-align: center;
+                    padding-top: 8px;
+
+                    .vr {
+                        border: 1px solid #DFE0EB;
+                    }
+
+                    ul {
+                        width: 100%;
+                        
+                        .list-group-item {
+                            @include font_16($clr-9fa);
+                            padding: $p-24 0;
+
+                            .statData {
+                                @include font_24($clr-252);
+                                padding-top: 6px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .details {
+            
+            #unresolveTix {
+                padding: $p-30 15px 0 $p-30; 
+
+                .card {
+                    height: 100%;
+
+                    .card-body {
+                        
+                        .tixInfo {
+                            width: 100%;
+        
+                            section {
+                                padding: $p-12 $p-12 0;
+
+                                #viewDetails {
+                                    @include font_14($clr-375);
+                                    text-align: right;
+
+                                    &:hover {
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                p {
+                                    @include font_12($clr-9fa);
+                                    color: #9fa2b4;
+
+                                    span {
+                                        font-weight: $fw-600;
+                                    }
+                                }
+                            }
+
+                            ul {
+                                
+                                li {
+                                    display: flex;
+                                    @include font_14($clr-252);
+                                    padding: 20px $p-12; 
+                                    
+                                    .tixData {
+                                        text-align: right;
+                                        color: $clr-9fa;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            #taskCard {
+                padding: $p-30 $p-30 0 15px;
+
+                .card {
+                    height: 100%;
+                    .card-body {
+                        
+                        .tasks {
+                            width: 100%;
+        
+                            section {
+                                padding: $p-12 $p-12 0;
+
+                                #viewAll {
+                                    @include font_14($clr-375);
+                                    text-align: right;
+
+                                    &:hover {
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                p {
+                                    @include font_12($clr-9fa);
+                                    color: #9fa2b4;
+                                }
+                            }
+
+                            ul {
+                                
+                                li {
+                                    display: flex;
+                                    @include font_14($clr-252);
+                                    padding: 17px $p-12;
+                                    
+                                    .newTask {
+                                        color: $clr-c5c;
+                                    }
+
+                                    input {
+                                        width: 20px;
+                                        height: 20px;
+                                        border-radius: 50%;
+                                    }
+
+                                    label {
+                                        padding-top: 4px;
+                                        padding-left: 16px;
+                                    }
+
+                                    .btn {
+                                        margin-right: 0;
+                                        margin-left: auto;
+                                        @include font_11();
+                                    }
+
+                                    .btn-light {
+                                        color: $clr-9fa;
+                                    }
+
+                                    .btn-warning {
+                                        color: $white;
+                                        background-color: #FEC400;
+                                        border: #FEC400;
+                                    }
+
+                                    .btn-success {
+                                        color: $white;
+                                        background-color: #29CC97;
+                                        border: #29CC97;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

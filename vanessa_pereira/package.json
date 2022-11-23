@@ -1,0 +1,19 @@
+{
+  "name": "vanessa_pereira",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server --baseDir=\"public\"",
+    "watch": "sass --watch src/scss:public/assets/css",
+    "start": "concurrently \"npm run watch\" \"npm run dev\""
+  },
+  "author": "Vanessa Pereira",
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "lite-server": "^2.6.1",
+    "sass": "^1.56.1"
+  }
+}

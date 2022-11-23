@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Overview</title>
+		
+		<!-- CSS only -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> 
+		<link rel="stylesheet" href="assets/css/style.css" />
+
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	
+        <!--Font Awesome-->
+        <script src="https://kit.fontawesome.com/f81dabbd3d.js" crossorigin="anonymous"></script>
+    </head>
+	<body>
+        <div class="row mx-0">
+            <!--Left Sidebar Navigation-->
+            <nav id="dashboard" class="col-sm-3 col-md-3 col-lg-2 g-0">
+                <div id="logo">
+                    <i class="fa-solid fa-circle"></i>
+                    <h1>Dashboard Kit</h1>
+                </div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            Overview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-ticket"></i>
+                            Tickets
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            Ideas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-users"></i>
+                            Contacts
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-user-tie"></i>
+                            Agents
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-book"></i>
+                            Articles
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <hr>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-gear"></i>
+                            Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-award"></i>
+                            Subscription
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!--Main Content-->
+            <main class="col-sm-9 col-md-9 col-lg-10 g-0">
+                <!--Header-->
+                <header class="hstack gap-3">
+                    <h2 class="bg-light">Overview</h2>
+                    <div class="bg-light ms-auto profile">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-bell position-relative">
+                            <span class="position-absolute top-0 start-75 translate-middle p-1 bg-primary border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </i>
+                    </div>
+                    <div class="vr"></div>
+                    <div class="bg-light profile">
+                        <p>Jones Ferdinand</p>
+                        <div id="ellipse">
+                            <div id="profilePic">
+                                <img src="assets/img/jones.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!--Top Row, 4 column Data-->
+                <section class="row data row-cols-1 row-cols-md-4 g-4">
+                    <!--Unresolved-->
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title dataTitle">Unresolved</p>
+                                <p class="card-text number">60</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Overdue-->
+                    <div class="col">
+                        <div class="card selected">
+                            <div class="card-body active">
+                                <p class="card-title dataTitle">Overdue</p>
+                                <p class="card-text number">16</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Open-->
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title dataTitle">Open</p>
+                                <p class="card-text number">43</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--On hold-->
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title dataTitle">On hold</p>
+                                <p class="card-text number">64</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--Today's Trends-->
+                <section class="row trends g-0">
+                    <div class="container col-12 g-0">
+                        <!--Trend's Graph-->
+                        <figure class="col-8 g-0">
+                            <h3>Today's trends</h3>
+                            <section class="row">
+                                <p id="updateTime" class="col-6 g-0">as of 25 May 2019, 09:41 PM</p>
+                                <div id="legend" class="col-6 g-0">
+                                    <div>
+                                        <svg id="today" height="2" width="16">
+                                            <line x1="0" y1="0" x2="15" y2="0"/>
+                                        </svg>
+                                    </div>
+                                    <p>Today</p>
+                                    <div>
+                                        <svg id="yesterday" height="2" width="16">
+                                            <line x1="0" y1="0" x2="15" y2="0"/>
+                                        </svg>
+                                    </div>
+                                    <p>Yesterday</p>
+                                </div>
+                            </section>
+                            <img id="graph" src="assets/img/graph.png"/>
+                        </figure>
+                        <!--Right Side Add. Info-->
+                        <aside class="col-4 g-0 stats">
+                            <div class="d-flex" style="height: 100%;">
+                                <div class="vr"></div>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    Resolved
+                                    <div class="statData">449</div>
+                                </li>
+                                <li class="list-group-item">
+                                    Received
+                                    <div class="statData">426</div>
+                                </li>
+                                <li class="list-group-item">
+                                    Average first response time
+                                    <div class="statData">33m</div>
+                                </li>
+                                <li class="list-group-item">
+                                    Average response time
+                                    <div class="statData">3h 8m</div>
+                                </li>
+                                <li class="list-group-item">
+                                    Resolution within SLA
+                                    <div class="statData">94%</div>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
+                </section>
+                <!--Bottom Row Task Details-->
+                <section class="row details row-cols-md-2 g-0">
+                    <!--Unresolved Tickets-->
+                    <div id="unresolveTix" class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <article class="col-6 tixInfo">
+                                    <section class="row">
+                                        <h5 class="col-6">Unresolved tickets</h5>
+                                        <div id="viewDetails" class="col-6" href="#">View details</div>
+                                        <p> Group: <span>Support</span></p>
+                                    </section>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="col-6">Waiting on Feature Request</div>
+                                            <div class="col-6 tixData">4238</div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="col-6">Awaiting Customer Response</div>
+                                            <div class="col-6 tixData">1005</div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="col-6">Awaiting Developer Fix</div>
+                                            <div class="col-6 tixData">914</div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="col-6">Pending</div>
+                                            <div class="col-6 tixData">281</div>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Tasks-->
+                    <div id="taskCard" class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <article class="col-6 tasks">
+                                    <section class="row">
+                                        <h6 class="col-6">Tasks</h6>
+                                        <div id="viewAll" class="col-6" href="#">View all</div>
+                                        <p>Today</p>
+                                    </section>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="col-6 newTask">Create new task</div>
+                                            <button type="button" class="btn btn-light">+</button>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="col-6">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">Finish ticket update</label>
+                                            </div>
+                                            <button type="button" class="btn btn-warning">Urgent</button>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="col-6">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">Create new ticket example</label>
+                                            </div>
+                                            <button type="button" class="btn btn-success">New</button>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="col-6">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                <label class="form-check-label" for="flexCheckChecked">Update ticket report</label>
+                                            </div>
+                                            <button type="button" class="btn btn-light">Default</button>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+		
+		<!-- JavaScript Bundle with Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	</body>
+</html>
