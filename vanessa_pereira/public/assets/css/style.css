@@ -5,7 +5,7 @@
 /*Margins*/
 /*Paddings*/
 /*Font Mixins*/
-/*---Code---*/
+/*---Styling---*/
 h1 {
   font-family: "Mulish";
   font-weight: 700;
@@ -39,6 +39,11 @@ h6 {
 
 body {
   background-color: #363740;
+  /*Sidebar Navigation*/
+  /*Main Content*/
+}
+body #dashboard {
+  /*Sidebar links*/
 }
 body #dashboard #logo {
   display: flex;
@@ -86,6 +91,10 @@ body #dashboard .nav .nav-item .active {
 body main {
   background-color: #F7F8FC;
   padding: 30px;
+  /*Header Content*/
+  /*Top Row Data*/
+  /*Today's Trends Section*/
+  /*Final 2 Cards w/ Task Details*/
 }
 body main header {
   padding: 0 30px;
@@ -98,8 +107,10 @@ body main header .profile {
   line-height: 20px;
   letter-spacing: 0.2px;
   color: #252733;
+  /*Profile Icon*/
 }
 body main header .profile i {
+  /*Search & Notif Styling*/
   padding: 0 12px;
   color: #C5C7CD;
 }
@@ -141,6 +152,7 @@ body main .data .col {
   line-height: 24px;
   letter-spacing: 0.4px;
   color: #9fa2b4;
+  /*Active Card - Blue*/
 }
 body main .data .col:hover {
   color: #3751FF;
@@ -153,6 +165,7 @@ body main .data .col .card:hover {
   cursor: pointer;
 }
 body main .data .col .card .card-body .number {
+  /*Data number*/
   font-family: "Mulish";
   font-weight: 700;
   font-size: 40px;
@@ -185,12 +198,16 @@ body main .trends .container {
   background-color: #ffffff;
   border: 1px solid #DFE0EB;
   border-radius: 8px;
+  /*Left Graph*/
+  /*Right Aside Stats*/
 }
 body main .trends .container figure {
   padding: 32px 30px 0;
+  /*Graph*/
 }
 body main .trends .container figure .row {
   padding: 0 12px;
+  /*Legend*/
 }
 body main .trends .container figure .row #updateTime {
   display: inline-flex;
@@ -252,6 +269,10 @@ body main .trends .container .stats ul .list-group-item .statData {
   letter-spacing: 0.3px;
   color: #252733;
   padding-top: 6px;
+}
+body main .details {
+  /*Unresolve Tickets Card*/
+  /*Task Card*/
 }
 body main .details #unresolveTix {
   padding: 30px 15px 0 30px;
@@ -343,6 +364,7 @@ body main .details #taskCard .card .card-body .tasks ul li {
   letter-spacing: 0.2px;
   color: #252733;
   padding: 17px 12px;
+  /*Buttons*/
 }
 body main .details #taskCard .card .card-body .tasks ul li .newTask {
   color: #C5C7CD;

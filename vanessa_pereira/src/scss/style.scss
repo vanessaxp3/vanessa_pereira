@@ -103,7 +103,7 @@ $p-34: 34px;
 
 
 
-/*---Code---*/
+/*---Styling---*/
 
 h1 {
     @include font_19($clr-a4a);
@@ -124,6 +124,7 @@ h6 {
 body {
     background-color: $clr-363;
 
+    /*Sidebar Navigation*/
     #dashboard {
 
         #logo {
@@ -138,6 +139,7 @@ body {
             }
         }
         
+        /*Sidebar links*/
         .nav {
             padding-top: 55px;
 
@@ -168,10 +170,12 @@ body {
         }
     }
 
+    /*Main Content*/
     main {
         background-color: $clr-f7f;
         padding: $p-30;
         
+        /*Header Content*/
         header {
             padding: 0 $p-30;
 
@@ -180,11 +184,12 @@ body {
                 @include font_14($clr-252);
 
                 i{
-                   padding: 0 $p-12;
-                   color: $clr-c5c;
+                    /*Search & Notif Styling*/
+                    padding: 0 $p-12;
+                    color: $clr-c5c;
 
-                   &:hover{
-                    cursor: pointer;
+                    &:hover{
+                        cursor: pointer;
                    }
                 }
 
@@ -192,6 +197,7 @@ body {
                     padding: 8px 14px 0 $p-24;
                 }
 
+                /*Profile Icon*/
                 #ellipse {
                     display: flex;
                     justify-content: center;
@@ -218,6 +224,7 @@ body {
             }
         }
 
+        /*Top Row Data*/
         .data {
             text-align: center;
             padding: $p-30 $p-30 0 $p-30;
@@ -240,6 +247,7 @@ body {
                     .card-body {
 
                         .number {
+                            /*Data number*/
                             @include font_40($clr-252);
 
                             &:hover {
@@ -249,6 +257,7 @@ body {
                     }
                 }
                 
+                /*Active Card - Blue*/
                 .selected {
                     border: 1px solid #3751FF;
 
@@ -263,6 +272,7 @@ body {
             }
         }
 
+        /*Today's Trends Section*/
         .trends {
             padding: $p-30 $p-30 0 $p-30;
 
@@ -272,6 +282,7 @@ body {
                 border: 1px solid #DFE0EB;
                 border-radius: 8px;
 
+                /*Left Graph*/
                 figure {
                     padding: $p-32 $p-30 0;
 
@@ -284,6 +295,7 @@ body {
                             color: #9fa2b4;
                         }
 
+                        /*Legend*/
                         #legend {
                             display: inline-flex;
                             justify-content: end;
@@ -303,12 +315,14 @@ body {
                         }
                     }
 
+                    /*Graph*/
                     img {
                         width: 100%;
                         padding-right: $p-30;
                     }
                 }
 
+                /*Right Aside Stats*/
                 .stats {
                     display: flex;
                     text-align: center;
@@ -336,8 +350,10 @@ body {
             }
         }
 
+        /*Final 2 Cards w/ Task Details*/
         .details {
             
+            /*Unresolve Tickets Card*/
             #unresolveTix {
                 padding: $p-30 15px 0 $p-30; 
 
@@ -390,6 +406,7 @@ body {
                 }
             }
 
+            /*Task Card*/
             #taskCard {
                 padding: $p-30 $p-30 0 15px;
 
@@ -440,6 +457,7 @@ body {
                                         padding-left: 16px;
                                     }
 
+                                    /*Buttons*/
                                     .btn {
                                         margin-right: 0;
                                         margin-left: auto;
